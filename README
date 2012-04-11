@@ -1,0 +1,23 @@
+This is a Data Access Object implementation for Java, coupled with the Data Transfer Object which i use in my Java projects and it makes my job easier as i dont have to write insert/update/select/delete basic queries by Hand for every table in my database.
+
+DTO serves as the Base class, Each DTO extended class must have a 
+String tablename : name of the table which this DTO represents
+Arrayist<String> columns : list of columns in the table, first column being the Primary Key always.
+Arrayist<String> columns = new ArrayList<String>(Arrays.asList("id", "name"));
+
+1. Method Implemented:
+2. insert(T dto)
+3. insertMany(ArrayList<t> dtos)
+4. selectById(T dto, String id)
+5. selectById(T dto)
+6. selectAll(T dto)
+7. selectWhere(T dto, List<String> columns, List<String> where)
+8. selectWhere(T dto, String whereColumn)
+9. selectWhere(T dto, List<String> where)
+10. selectWhere(T dto, String selectColumn, String whereColumn)
+11. selectWhere(T dto, List<String> select, String whereColumn)
+12. deleteById(T dto)
+13. deleteWhere(T dto, List<String> columnsWhere)
+14. updateById(T dto, List<String> columnsToUpdate)
+
+Documentation in included above all functions.
